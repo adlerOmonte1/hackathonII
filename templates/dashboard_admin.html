@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Panel Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="container">
+            <span class="navbar-brand">🛡️ PANEL ADMINISTRADOR</span>
+            <span class="navbar-text text-white me-3">Hola, {{ current_user.username }}</span>
+            <a href="{{ url_for('logout') }}" class="btn btn-light btn-sm">Salir</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1>Bienvenido, Jefe.</h1>
+        <p class="lead">Aquí tienes control total del sistema.</p>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center p-4">
+                    <h3>Gestionar Documentos</h3>
+                    <p>Aprobar o Rechazar archivos.</p>
+                    <button class="btn btn-outline-danger">Ir a Gestión</button>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card text-center p-4">
+                    <h3>Ver Reportes</h3>
+                    <p>Descargar Excel/PDF.</p>
+                    <button class="btn btn-outline-danger">Ver Reportes</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Probando el decorador de seguridad -->
+        <div class="mt-4">
+             <a href="{{ url_for('zona_admin') }}" class="btn btn-warning">Probar Ruta Protegida</a>
+        </div>
+    </div>
+</body>
+</html>

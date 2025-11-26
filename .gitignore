@@ -1,0 +1,24 @@
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+
+# Entorno Virtual (donde se instalan las librerías)
+venv/
+env/
+.env
+
+# Base de Datos (¡MUY IMPORTANTE NO SUBIR ESTO!)
+*.db
+*.sqlite3
+instance/
+
+# Archivos subidos por los usuarios (no queremos llenar GitHub de PDFs de prueba)
+app/static/uploads/*
+!app/static/uploads/.gitkeep
+
+# Logs de errores
+*.log
+
+# Archivos temporales de Excel/PDF si se generaran en disco
+*.xlsx
+*.pdf
