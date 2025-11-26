@@ -37,6 +37,13 @@ def role_required(role_name):
         return decorated_function
     return decorator
 
+
+
+
+
+
+
+
 # --- RUTAS ---
 
 @app.route('/', methods=['GET', 'POST'])
@@ -82,7 +89,11 @@ def dashboard():
 def zona_admin():
     return "<h1>Área Secreta del Administrador</h1><a href='/dashboard'>Volver</a>"
 
-# --- INICIALIZADOR (MAGIA) ---
+
+
+
+
+# --- INICIALIZADOR ---
 if __name__ == '__main__':
     with app.app_context():
         db.create_all() # Crea la BD si no existe
